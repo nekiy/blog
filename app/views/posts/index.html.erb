@@ -22,10 +22,12 @@
 </div>
 <div id="collapse<%=post.id%>" class="accordion-body collapse">
 <div class="accordion-inner">
-	  <h6 class="text"> <%= post.text %>
+	  <h6 class="text"> <%= post.text %> </h6>
+
 	  </div>
 </div>
 </div>
+ <p><%=truncate(post.text,:length=>200)%> </p>
 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%=post.id%>">
 Показать полностью
 </a>
@@ -38,4 +40,3 @@
 </div>
 <% end %>
 </center>
-<%=truncate(@post.text,:length=>100)%>
